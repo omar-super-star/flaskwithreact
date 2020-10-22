@@ -109,6 +109,15 @@ def catgerory_questions(id):
 def questions_id(id):
     quetion=db.session.query(Question).filter_by(id=id).one().delete()
     return "ok"
+@app.errorhandler(404)
+def not_found_error(error):
+    return {"error":"error 404"}
+@app.errorhandler(402)
+def not_found_error(error):
+    return {"error":"error 402"}
+@app.errorhandler(500)
+def server_error(error):
+    return {"error":"error 500"}
 app.run()
 
     
