@@ -6,7 +6,7 @@ flask for back-end it is  a project for nanodegree programe udacity
 
 GET /categories
 
- fetches a dictonary of categories in which the keys are the ids and the value is the corresponding string of category
+    fetches a dictonary of categories in which the keys are the ids and the value is the corresponding string of category
  
  request args= None
  
@@ -21,12 +21,13 @@ GET /categories
  
 GET questions?page=<int>
  
-  fetches a list of questions(only 10) and dictonary categories and total answer(int) 
+      fetches a list of questions(only 10) and dictonary categories and total answer(int) 
   
   return an opject key is "questions,total_questions,category"
   
   -example
-  {"questions":[{"id":1,
+  
+      {"questions":[{"id":1,
                "question":"what is th gravity,
                 "answer":is a power,
                 "category":science,
@@ -37,18 +38,18 @@ GET questions?page=<int>
                 "category":science,
                  "difficulty":1}],
   
-   "total_questions":2,
-   "category":{"1":"science",
+        "total_questions":2,
+       "category":{"1":"science",
                 "2":"art",}
                 }
                 
    POST questions
    
-   add the data to the question table
+     add the data to the question table
    
    request aargs:question: string,answer: string,difficulty: intger,category:intger
    
-   return{"ok":"great"}
+      return{"ok":"great"}
   
   
    POST /questionssearch
@@ -58,7 +59,8 @@ GET questions?page=<int>
    return dictonary his key is question and total_questions
    
    example:
-   {"questions":[{"id":1,
+   
+       {"questions":[{"id":1,
                "question":"what is th gravity,
                 "answer":is a power,
                 "category":science,
@@ -69,7 +71,7 @@ GET questions?page=<int>
                 "category":science,
                  "difficulty":1}],
   
-   "total_questions":2}
+      "total_questions":2}
   
   
   
@@ -82,7 +84,8 @@ GET questions?page=<int>
    return  dictonary his key is question and total_questions
    
    example 
- {"questions":[{"id":1,
+   
+        {"questions":[{"id":1,
                "question":"what is th gravity,
                 "answer":is a power,
                 "category":science,
@@ -93,29 +96,33 @@ GET questions?page=<int>
                 "category":science,
                  "difficulty":1}],
   
-   "total_questions":2}
+      "total_questions":2}
    
    
   DELETE /questions/<id>
   
-  id=inger the id of question
+   id=inger the id of question
   
-  delete the question have the id from the table of database
-  example return "ok"
+        delete the question have the id from the table of database
+        
+  example 
+  
+         return "ok"
   
   POST endpoint=/quizzes
   request-data= dictonary {quiz_category:dictionary {"id": id of category, "type": type of category}
  
-   return one question then return the next question in the next post when question finish will return the first question
+       return one question then return the next question in the next post when question finish will return the first question
    
    example 
-   first time:
+   
+       first time:
        {"id":1,
                "question":"what is th gravity,
                 "answer":is a power,
                 "category":science,
                  "difficulty":1}
-  second time:
+       second time:
          {"id":2,
                "question":"what is the g,
                 "answer":9.8,
