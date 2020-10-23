@@ -12,12 +12,12 @@ GET /categories
  
  returns: an object with a single key ,categores that contains of object id: category_string
  
- {"1": "science",
- "2":"arts",
- "3":"geography",
- "4":"history",
- "5":"entertainment",
- "6":"sports"}
+       {"1": "science",
+       "2":"arts",
+        "3":"geography",
+        "4":"history",
+        "5":"entertainment",
+         "6":"sports"}
  
 GET questions?page=<int>
  
